@@ -1,5 +1,5 @@
 import 'package:teledart/teledart.dart';
-import '../core/constants.dart';
+import 'constants.dart';
 
 class Utils {
   final TeleDart bot;

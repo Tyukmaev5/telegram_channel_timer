@@ -3,8 +3,7 @@ import 'dart:io';
 import 'package:dotenv/dotenv.dart';
 import 'package:teledart/teledart.dart';
 import 'package:teledart/telegram.dart';
-import 'features/timer.dart';
-import '../bin/core/utils.dart';
+import 'package:telegram_bot/features/timer.dart'; 
 
 void main() async { 
   final env = DotEnv()..load();
@@ -20,9 +19,10 @@ void main() async {
 
   final teledart = TeleDart(botToken, Event(me.username!));
   teledart.start();
-
-  final utils = Utils(teledart);
-  utils.checkChannel();
+  
+  // Временно убираем проверку канала
+  // final utils = Utils(teledart);
+  //utils.checkChannel();
 
   // Используем TimerHelper
   final timerHelper = TimerHelper(teledart);
